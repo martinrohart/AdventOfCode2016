@@ -33,12 +33,12 @@ function main(input){
 	}
 
 	var safe = 0;
-	for(var row of map){
-		for(var tile of row){
+	map.forEach(function (row){
+		row.forEach(function(tile){
 			if(tile=='.'){
 				safe++;
 			}
-		}
-	}
+		})
+	});
 	console.log("Safe tiles: "+safe);
 }
